@@ -1,0 +1,59 @@
+.taskContainer {
+  margin-top: 5px;
+
+  .taskInner {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 15px;
+      height: 15px;
+    }
+
+    p {
+      flex: 1;
+
+
+      &.done {
+        opacity: .4;
+      }
+    }
+
+    .removeTask {
+      position: relative;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+
+      &:before,&:after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        color: black;
+        border-top: 1px solid black;
+        top: 50%;
+        left: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
