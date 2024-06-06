@@ -1,5 +1,6 @@
 {
   "name": "todos",
+  "homepage": "https://SHDGMSQ.github.io/todos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
