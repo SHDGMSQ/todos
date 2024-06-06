@@ -8,7 +8,7 @@ export const AddItemForm: React.FC<CustomInputProps> = React.memo(({addItem, sho
 
   const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setError("");
-    setTitle(e.currentTarget.value.trim());
+    setTitle(e.currentTarget.value);
   }
 
   const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -18,8 +18,9 @@ export const AddItemForm: React.FC<CustomInputProps> = React.memo(({addItem, sho
   }
 
   const addItemHandler = () => {
-    if (!title) {
+    if (!title.trim()) {
       setError("Title is required!")
+      setTitle("");
     } else {
       addItem(title);
       setTitle("");
